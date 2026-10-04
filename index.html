@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 量化系統・台股研究工作台 介紹片</title>
+<meta name="description" content="從一條證據鏈重新介紹 AI 量化系統：資料、證據、判斷、證偽。3 分 53 秒。">
+<meta property="og:title" content="AI 量化系統・台股研究工作台 介紹片">
+<meta property="og:description" content="資料、證據、判斷、證偽。每個數字標日期，不給目標價。">
+<meta property="og:image" content="poster.jpg">
+<style>
+:root{--bg:#0a0f1f;--ink:#f1f4ff;--mut:#9aa3c7;--ind:#8b8dff;--line:rgba(139,141,255,.28)}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 700px at 80% -10%,#16224a,rgba(22,34,74,0) 60%),var(--bg);color:var(--ink);
+ font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6}
+main{max-width:1100px;margin:0 auto;padding:32px 16px 56px}
+h1{font-size:clamp(26px,4.5vw,44px);margin:0 0 6px;font-weight:900}
+p.sub{color:var(--mut);margin:0 0 22px;font-size:clamp(15px,2vw,18px)}
+video{width:100%;aspect-ratio:16/9;background:#000;border-radius:16px;box-shadow:0 30px 90px rgba(0,0,0,.55);border:1px solid var(--line)}
+.ch{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 8px}
+.ch button{background:rgba(139,141,255,.12);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font:inherit;font-size:15px;cursor:pointer}
+.ch button:hover,.ch button:focus-visible{background:rgba(139,141,255,.28);outline:none}
+.note{margin-top:28px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;color:var(--mut);font-size:14px}
+.note b{color:var(--ink)}
+</style>
+</head>
+<body>
+<main>
+ <h1>AI 量化系統・台股研究工作台</h1>
+ <p class="sub">這是一支 3 分 53 秒的介紹片：從「31 頁功能」重構成「一條證據鏈」。</p>
+ <video id="v" controls playsinline preload="metadata" poster="poster.jpg" src="video.mp4"></video>
+ <div class="ch" role="group" aria-label="章節">
+  <button data-t="0">0:00 開場：一條證據鏈</button>
+  <button data-t="52">0:52 Clawd 完整導覽</button>
+  <button data-t="209">3:29 結尾：怎麼開始</button>
+ </div>
+ <div class="note">
+  <b>說明：</b>畫面為真實系統截圖，資料至 2026-09-18 收盤；系統只用收盤後的公開資料，每個數字標日期，不給目標價，也不下單。
+  部分個人研究內容已遮蔽。本片為研究輔助工具的介紹，<b>非投資建議</b>。
+ </div>
+</main>
+<script>
+document.querySelectorAll('.ch button').forEach(function(b){
+  b.addEventListener('click',function(){var v=document.getElementById('v');v.currentTime=+b.dataset.t;v.play()})
+})
+</script>
+</body>
+</html>
